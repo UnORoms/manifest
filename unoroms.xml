@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="unorom"
+           fetch="https://github.com/UnORoms/"
+           sync-j="4" />
+
+  <project path="vendor/unoroms/scripts" name="android_vendor_unoroms_scripts" remote="unorom" revision="master" />
+  <project path="vendor/unoroms/devices" name="android_vendor_unoroms_devices" remote="unorom" revision="%deviceBranch%" />
+
+</manifest>

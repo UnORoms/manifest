@@ -11,7 +11,8 @@ fi
 
 
 wget https://raw.github.com/UnORoms/manifest/master/unoroms.xml
-sed 's/%deviceBranch%/$1/g' unoroms.xml > .repo/local_manifests/unoroms.xml
+script="s/%deviceBranch%/$1/g"
+sed $script unoroms.xml > .repo/local_manifests/unoroms.xml
 repo sync -j8 -f vendor/unoroms/scripts
 repo sync -j8 -f vendor/unoroms/devices
 rm -f unoroms.xml

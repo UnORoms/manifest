@@ -14,6 +14,8 @@ then
    mkdir -p .repo/local_manifests
 fi
 
+repo forall -p -c "git reset --hard && git clean -f -d"
+
 if [ "$(ls -A .repo/local_manifests )" ]
 then
 	rm -f .repo/local_manifests/*

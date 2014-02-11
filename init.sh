@@ -9,6 +9,15 @@ then
    exit 1
 fi
 
+if [ ! -d .repo/local_manifests ]
+then
+   mkdir -p .repo/local_manifests
+fi
+
+if [ "$(ls -A .repo/local_manifests )" ]
+then
+	rm -f .repo/local_manifests/*
+fi
 
 wget https://raw.github.com/UnORoms/manifest/master/unoroms.xml
 script="s/%deviceBranch%/$1/g"

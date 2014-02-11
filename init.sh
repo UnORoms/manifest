@@ -1,4 +1,5 @@
 #!/bin/bash
+set -xe
 
 echo ".....-----===== UnORoms Project =====-----......"
 echo "Initializing Devices branch : $1"
